@@ -13,7 +13,12 @@ I design and build practical AI systems, from agentic workflows and MCP integrat
 
 ### Selected public work
 
-- [TabSpaces website](https://github.com/jorgitobg/tabspaces-site) — public homepage and privacy-policy repository; it contains no application source code.
+- **[karana-monitor](https://github.com/jorgitobg/karana-monitor)** — modular Bash/Python server monitor I run on my own hosts: bounded checks, durable alert outbox, ShellCheck and unit tests in CI.
+
+### Currently building
+
+- **job-radar** — scheduled agent that discovers remote roles from public job-board APIs (Greenhouse, Ashby, Lever) and scores them against a profile.
+- **tender-radar** — public-procurement assistant: open tender data, document extraction, compliance matrix and an explained go/no-go.
 
 I share work as it is ready to be reviewed. AI-assisted, human-reviewed; no benchmark claims without reproducible evidence.
 
