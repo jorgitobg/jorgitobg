@@ -13,11 +13,12 @@ I design and build practical AI systems, from agentic workflows and MCP integrat
 
 ### Selected public work
 
+- **[agent-harness](https://github.com/jorgitobg/agent-harness)** — an agent harness built from scratch, one story at a time: typed tools with JSON Schema, guardrails, budgeted loop, sub-agents, model router, tracing and evals.
 - **[karana-monitor](https://github.com/jorgitobg/karana-monitor)** — modular Bash/Python server monitor I run on my own hosts: bounded checks, durable alert outbox, ShellCheck and unit tests in CI.
 
 ### Currently building
 
-- **job-radar** — scheduled agent that discovers remote roles from public job-board APIs (Greenhouse, Ashby, Lever) and scores them against a profile.
+- **sovereign-rag** — fully offline RAG over public Spanish/EU documents with local models, hybrid search and mandatory citations.
 - **tender-radar** — public-procurement assistant: open tender data, document extraction, compliance matrix and an explained go/no-go.
 
 I share work as it is ready to be reviewed. AI-assisted, human-reviewed; no benchmark claims without reproducible evidence.
