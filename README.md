@@ -14,7 +14,6 @@ I design and build practical AI systems, from agentic workflows and MCP integrat
 ### Selected public work
 
 - **[agent-harness](https://github.com/jorgitobg/agent-harness)** — an agent harness built from scratch, one story at a time: typed tools with JSON Schema, guardrails, budgeted loop, sub-agents, model router, tracing and evals.
-- **[karana-monitor](https://github.com/jorgitobg/karana-monitor)** — modular Bash/Python server monitor I run on my own hosts: bounded checks, durable alert outbox, ShellCheck and unit tests in CI.
 
 ### Currently building
 
