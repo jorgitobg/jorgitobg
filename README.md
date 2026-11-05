@@ -20,8 +20,9 @@ I design and build practical AI systems, from agentic workflows and MCP integrat
 
 ### Currently building
 
-- **sovereign-rag** — fully offline RAG over public Spanish/EU documents with local models, hybrid search and mandatory citations.
-- **tender-radar** — public-procurement assistant: open tender data, document extraction, compliance matrix and an explained go/no-go.
+- **agent-harness** — next stories: an OpenAI-compatible adapter (llama.cpp, Ollama, OpenRouter) checked against recorded fixtures, and hooks wired into the offline demo.
+- **mcp-toolbox** — a tender-triage tool backed by `open-tender-radar`, plus MCP resources for the bundled BOE documents.
+- **A provider-agnostic AI service starter** — bounded requests, safe failure handling and no content in logs, with a deterministic offline demo. Not published until it passes the same checks as the rest.
 
 I share work as it is ready to be reviewed. AI-assisted, human-reviewed; no benchmark claims without reproducible evidence.
 
