@@ -17,12 +17,13 @@ I design and build practical AI systems, from agentic workflows and MCP integrat
 - **[open-tender-radar](https://github.com/jorgitobg/open-tender-radar)** — screens public tenders from TED and PLACSP against a company profile and explains every GO / REVIEW / NO_GO decision rule by rule. Offline demo, recorded open data, no keys.
 - **[sovereign-rag](https://github.com/jorgitobg/sovereign-rag)** — question answering over Spanish BOE documents where every answer cites its source passage or abstains. Offline and deterministic, with a reproducible evaluation (and its failures) in the README.
 - **[mcp-toolbox](https://github.com/jorgitobg/mcp-toolbox)** — a small MCP server (official Python SDK, stdio) that searches and reads BOE documents. Tested against the real server process with the SDK's own client; offline demo, no keys.
+- **[llm-gateway](https://github.com/jorgitobg/llm-gateway)** — a small LLM gateway service: bounded requests, ordered provider fallback, a per-provider circuit breaker and logs that never contain prompts. Offline demo with simulated outages; an OpenAI-compatible adapter for hosted or local models.
 
 ### Currently building
 
 - **agent-harness** — next stories: an OpenAI-compatible adapter (llama.cpp, Ollama, OpenRouter) checked against recorded fixtures, and hooks wired into the offline demo.
 - **mcp-toolbox** — a tender-triage tool backed by `open-tender-radar`, plus MCP resources for the bundled BOE documents.
-- **A provider-agnostic AI service starter** — bounded requests, safe failure handling and no content in logs, with a deterministic offline demo. Not published until it passes the same checks as the rest.
+- **llm-gateway** — next: validate the OpenAI-compatible adapter against a live local model and publish the results, including failures.
 
 I share work as it is ready to be reviewed. AI-assisted, human-reviewed; no benchmark claims without reproducible evidence.
 
