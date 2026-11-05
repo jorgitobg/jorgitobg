@@ -18,6 +18,7 @@ I design and build practical AI systems, from agentic workflows and MCP integrat
 - **[sovereign-rag](https://github.com/jorgitobg/sovereign-rag)** — question answering over Spanish BOE documents where every answer cites its source passage or abstains. Offline and deterministic, with a reproducible evaluation (and its failures) in the README.
 - **[mcp-toolbox](https://github.com/jorgitobg/mcp-toolbox)** — a small MCP server (official Python SDK, stdio) that searches and reads BOE documents. Tested against the real server process with the SDK's own client; offline demo, no keys.
 - **[llm-gateway](https://github.com/jorgitobg/llm-gateway)** — a small LLM gateway service: bounded requests, ordered provider fallback, a per-provider circuit breaker and logs that never contain prompts. Offline demo with simulated outages; an OpenAI-compatible adapter for hosted or local models.
+- **[jobwatch](https://github.com/jorgitobg/jobwatch)** — reports newly published remote roles from public job-board APIs (Greenhouse, Ashby, Lever). Per-source baselining, atomic state, untrusted-data-safe output; no runtime dependencies and an offline demo.
 
 ### Currently building
 
