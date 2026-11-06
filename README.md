@@ -13,6 +13,7 @@ I design and build practical AI systems, from agentic workflows and MCP integrat
 
 ### Selected public work
 
+- **[public-sector-copilot](https://github.com/jorgitobg/public-sector-copilot)** — the integration piece: one agent that triages public tenders and answers BOE questions with citations or an honest abstention, composed from four of the projects below (MCP server over stdio, cited RAG, LLM gateway with failover, permissioned agent loop). Pinned by commit, offline and deterministic; the model is scripted and the README says exactly what is real and what is simulated.
 - **[agent-harness](https://github.com/jorgitobg/agent-harness)** — an agent harness built from scratch, one story at a time: typed tools with JSON Schema, guardrails, budgeted loop, sub-agents, model router, tracing and evals.
 - **[open-tender-radar](https://github.com/jorgitobg/open-tender-radar)** — screens public tenders from TED and PLACSP against a company profile and explains every GO / REVIEW / NO_GO decision rule by rule. Offline demo, recorded open data, no keys.
 - **[sovereign-rag](https://github.com/jorgitobg/sovereign-rag)** — question answering over Spanish BOE documents where every answer cites its source passage or abstains. Offline and deterministic, with a reproducible evaluation (and its failures) in the README.
@@ -22,9 +23,9 @@ I design and build practical AI systems, from agentic workflows and MCP integrat
 
 ### Currently building
 
-- **agent-harness** — next stories: an OpenAI-compatible adapter (llama.cpp, Ollama, OpenRouter) checked against recorded fixtures, and hooks wired into the offline demo.
-- **mcp-toolbox** — a tender-triage tool backed by `open-tender-radar`, plus MCP resources for the bundled BOE documents.
-- **llm-gateway** — next: validate the OpenAI-compatible adapter against a live local model and publish the results, including failures.
+- **public-sector-copilot** — next: replace the scripted model with a live one and record the run as a fixture.
+- **mcp-toolbox** — MCP resources for the bundled BOE documents.
+- **llm-gateway** — publishing type information so dependants get strict typing across the boundary.
 
 I share work as it is ready to be reviewed. AI-assisted, human-reviewed; no benchmark claims without reproducible evidence.
 
