@@ -24,9 +24,8 @@ I design and build practical AI systems, from agentic workflows and MCP integrat
 ### Currently building
 
 - **public-sector-copilot** — next: record a successful live run as a second fixture.
-- **sovereign-rag** — next: an answer-focused model step so the extractive quote lands on the asked fact (two documented failures), and `py.typed`.
+- **sovereign-rag** — next: an answer-focused model step so the extractive quote lands on the asked fact (two documented failures).
 - **mcp-toolbox** — MCP resources for the bundled BOE documents.
-- **llm-gateway** — publishing type information so dependants get strict typing across the boundary.
 
 I share work as it is ready to be reviewed. AI-assisted, human-reviewed; no benchmark claims without reproducible evidence.
 
