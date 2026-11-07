@@ -13,7 +13,7 @@ I design and build practical AI systems, from agentic workflows and MCP integrat
 
 ### Selected public work
 
-- **[public-sector-copilot](https://github.com/jorgitobg/public-sector-copilot)** — the integration piece: one agent that triages public tenders and answers BOE questions with citations or an honest abstention, composed from four of the projects below (MCP server over stdio, cited RAG, LLM gateway with failover, permissioned agent loop). Pinned by commit, offline and deterministic; the model is scripted and the README says exactly what is real and what is simulated.
+- **[public-sector-copilot](https://github.com/jorgitobg/public-sector-copilot)** — the integration piece: one agent that triages public tenders and answers BOE questions with citations or an honest abstention, composed from four of the projects below (MCP server over stdio, cited RAG, LLM gateway with failover, permissioned agent loop). Pinned by commit, offline and deterministic; the offline demo is scripted, a live entry point runs it with a real model, and the README says exactly what is real, what is simulated and what the live run got wrong.
 - **[agent-harness](https://github.com/jorgitobg/agent-harness)** — an agent harness built from scratch, one story at a time: typed tools with JSON Schema, guardrails, budgeted loop, sub-agents, model router, tracing and evals.
 - **[open-tender-radar](https://github.com/jorgitobg/open-tender-radar)** — screens public tenders from TED and PLACSP against a company profile and explains every GO / REVIEW / NO_GO decision rule by rule. Offline demo, recorded open data, no keys.
 - **[sovereign-rag](https://github.com/jorgitobg/sovereign-rag)** — question answering over Spanish BOE documents where every answer cites its source passage or abstains. Offline and deterministic, with a reproducible evaluation (and its failures) in the README.
@@ -23,7 +23,7 @@ I design and build practical AI systems, from agentic workflows and MCP integrat
 
 ### Currently building
 
-- **public-sector-copilot** — next: replace the scripted model with a live one and record the run as a fixture.
+- **public-sector-copilot** — next: retrieval that bridges synonyms (the live run abstained on a question the corpus words differently), evaluated before claiming it helps.
 - **mcp-toolbox** — MCP resources for the bundled BOE documents.
 - **llm-gateway** — publishing type information so dependants get strict typing across the boundary.
 
