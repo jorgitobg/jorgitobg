@@ -4,30 +4,29 @@
 
 I design and build practical AI systems, from agentic workflows and MCP integrations to retrieval-augmented generation and document intelligence. With 25+ years across software engineering, infrastructure and technical leadership, I connect architecture decisions to working software.
 
-### What I focus on
+### Start here
 
-- Agentic systems, tool use and MCP
-- RAG and document intelligence
-- Provider-agnostic AI architecture, from cloud APIs to local inference
-- Reliable delivery: clear specifications, small changes and reproducible evaluation
+- **[public-sector-copilot](https://github.com/jorgitobg/public-sector-copilot)** — an integration demo: an agent triages recorded public tenders, answers BOE questions with citations or abstains, and asks permission before saving a report. It composes the MCP server, cited retrieval, gateway and agent loop below. The offline model is scripted; the README separates that demo from its live entry point and records the limitations.
+- **[agent-harness](https://github.com/jorgitobg/agent-harness)** — typed tools, JSON Schema validation, permissions, a budgeted agent loop, sub-agents, routing and tracing. The reproducible examples and evaluation runner use scripted models; they are not model benchmarks.
+- **[open-tender-radar](https://github.com/jorgitobg/open-tender-radar)** — screens recorded TED and PLACSP public tenders against a company profile and explains each GO / REVIEW / NO_GO decision, rule by rule. Offline demo, open data, no keys.
+- **[sovereign-rag](https://github.com/jorgitobg/sovereign-rag)** — extractive question answering over BOE documents, with citations and explicit abstention. The README includes reproducible evaluation results, failures and the limits of a small, partly tuned dataset. No neural retrieval or LLM is needed for the demo.
 
-### Selected public work
+### Supporting components
 
-- **[public-sector-copilot](https://github.com/jorgitobg/public-sector-copilot)** — the integration piece: one agent that triages public tenders and answers BOE questions with citations or an honest abstention, composed from four of the projects below (MCP server over stdio, cited RAG, LLM gateway with failover, permissioned agent loop). Pinned by commit, offline and deterministic; the offline demo is scripted, a live entry point runs it with a real model, and the README says exactly what is real, what is simulated and what the live run got wrong (then fixed upstream in sovereign-rag and re-checked).
-- **[agent-harness](https://github.com/jorgitobg/agent-harness)** — an agent harness built from scratch, one story at a time: typed tools with JSON Schema, guardrails, budgeted loop, sub-agents, model router, tracing, and an eval runner with scripted models (no real-model claims).
-- **[open-tender-radar](https://github.com/jorgitobg/open-tender-radar)** — screens public tenders from TED and PLACSP against a company profile and explains every GO / REVIEW / NO_GO decision rule by rule. Offline demo, recorded open data, no keys.
-- **[sovereign-rag](https://github.com/jorgitobg/sovereign-rag)** — question answering over Spanish BOE documents where every answer cites its source passage or abstains. Offline and deterministic, with a reproducible evaluation (and its failures) in the README.
-- **[mcp-toolbox](https://github.com/jorgitobg/mcp-toolbox)** — a small MCP server (official Python SDK, stdio): four read-only tools (BOE search and read, tender triage and lookup), resources and a prompt template. Tested against the real server process with the SDK's own client; offline demo, no keys.
-- **[llm-gateway](https://github.com/jorgitobg/llm-gateway)** — a small LLM gateway service: bounded requests, ordered provider fallback, a per-provider circuit breaker and logs that never contain prompts. Offline demo with simulated outages; an OpenAI-compatible adapter for hosted or local models.
-- **[jobwatch](https://github.com/jorgitobg/jobwatch)** — reports newly published remote roles from public job-board APIs (Greenhouse, Ashby, Lever). Per-source baselining, atomic state, untrusted-data-safe output; no runtime dependencies and an offline demo.
+- **[mcp-toolbox](https://github.com/jorgitobg/mcp-toolbox)** — read-only BOE search and tender triage over stdio, using the official MCP SDK and a real client/server integration test.
+- **[llm-gateway](https://github.com/jorgitobg/llm-gateway)** — bounded requests, ordered fallback, a circuit breaker and content-free logs. Its OpenAI-shaped chat endpoint is text-only: no tool calling, streaming or usage reporting.
+- **[durable-outbox](https://github.com/jorgitobg/durable-outbox)** — a dependency-free SQLite job outbox: idempotent enqueue, leased claims, bounded retries and dead-lettering. Delivery is at-least-once, not exactly-once; the demo shows why consumers must handle duplicates.
+- **[jobwatch](https://github.com/jorgitobg/jobwatch)** — watches public job-board APIs for new remote roles, with per-source baselines, atomic state and safe output. Includes an offline demo.
 
-### Currently building
+### Try it without API keys
 
-- **public-sector-copilot** — next: record a successful live run as a second fixture.
-- **sovereign-rag** — next: an answer-focused model step so the extractive quote lands on the asked fact (two documented failures).
-- **agent-harness** — running the eval runner against a real model through the same model port, with the cost shown next to the result.
+After following each repository's installation instructions:
 
-I share work as it is ready to be reviewed. AI-assisted, human-reviewed; no benchmark claims without reproducible evidence.
+- [Copilot demo](https://github.com/jorgitobg/public-sector-copilot#run-it-no-keys-no-network): `python -m public_sector_copilot.demo --deny --primary-down` exercises operator refusal and provider fallback.
+- [RAG evaluation](https://github.com/jorgitobg/sovereign-rag#evaluation): `python -m sovereign_rag.eval` reports retrieval, answer, citation and abstention results separately.
+- [Outbox demo](https://github.com/jorgitobg/durable-outbox#reproduce-locally): `python -m durable_outbox.demo` exercises retries, lease recovery and duplicate delivery.
+
+Built with AI assistance. I document specifications, trade-offs and reproducible failures rather than make unsupported benchmark claims.
 
 ### Technologies
 
