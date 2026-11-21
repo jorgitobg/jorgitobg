@@ -26,7 +26,7 @@ After following each repository's installation instructions:
 - [RAG evaluation](https://github.com/jorgitobg/sovereign-rag#evaluation): `python -m sovereign_rag.eval` reports retrieval, answer, citation and abstention results separately.
 - [Outbox demo](https://github.com/jorgitobg/durable-outbox#reproduce-locally): `python -m durable_outbox.demo` exercises retries, lease recovery and duplicate delivery.
 
-AI-assisted, human-reviewed. Specifications, trade-offs and reproducible failures matter more to me than unsupported benchmark claims.
+Built with AI assistance. I document specifications, trade-offs and reproducible failures rather than make unsupported benchmark claims.
 
 ### Technologies
 
